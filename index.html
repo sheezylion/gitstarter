@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>slack assignment</title>
+
+</head>
+<body>
+  <h1 data-testid="slackUserName">Segun Adesokan</h1>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png" alt="this is a no photo holder" width="200" height="200" data-testid="slackDisplayImage">
+  <p>Current day of the week: <span data-testid="currentDayOfTheWeek">Monday</span></p>
+  <p>Current UTC time: <span data-testid="currentUTCTime">13:46</span></p>
+  <p>Track: <span data-testid="myTrack"> Front-end </span></p>
+ 
+  <script>
+    const d = new Date();
+    const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    let day = weekday[d.getUTCDay()];
+    const time = Date.UTC(d.getFullYear(), d.getMonth(), d.getDay());
+    const timeElement = document.querySelector('[data-testid="currentUTCTime"]');
+    timeElement.innerHTML = time;
+    
+    const dateElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
+     dateElement.innerHTML = day;
+     let result ;
+
+let options = {
+            method: 'GET',
+            headers: {
+                'Content-Type': 
+                    'application/json;charset=utf-8',
+Authorization: `Bearer xapp-1-A05RPLCNC1Z-5859282302503-a1767ae4d99e78aeab825de0bd540abcf10df2d4680df851f104a5a2bd34bcaf`
+            },
+            params:{token:"xapp-1-A05RPLCNC1Z-5859282302503-a1767ae4d99e78aeab825de0bd540abcf10df2d4680df851f104a5a2bd34bcaf"}
+        }
+        // Fake api for making post requests
+        let fetchRes = fetch(
+"https://slack.com/api/users.profile.get", 
+                                        options);
+        fetchRes.then(res =>
+            res.json()).then(d => {
+                console.log(d)
+ result = d;
+            })
+
+
+console.log("result",result)
+    
+    /* xapp-1-A05RPLCNC1Z-5859282302503-a1767ae4d99e78aeab825de0bd540abcf10df2d4680df851f104a5a2bd34bcaf */
+  </script>
+
+  
+</body>
+</html>
