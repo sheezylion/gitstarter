@@ -3,16 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <link rel="stylesheet" href="styles.css">
   <title>slack assignment</title>
 
 </head>
 <body>
+  <div class="main-contianer">
+    <div>
+  <div>
   <h1 data-testid="slackUserName">Segun Adesokan</h1>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png" alt="this is a no photo holder" width="200" height="200" data-testid="slackDisplayImage">
+  <img src="https://ca.slack-edge.com/T05FFAA91JP-U05RMU55PT3-5c580f6bab3e-512" alt="segun adesokan" data-testid="slackDisplayImage">
+  </div>
+  
+ <div>
+  <h2>Current Information</h2>
   <p>Current day of the week: <span data-testid="currentDayOfTheWeek">Monday</span></p>
   <p>Current UTC time: <span data-testid="currentUTCTime">13:46</span></p>
-  <p>Track: <span data-testid="myTrack"> Front-end </span></p>
+  <p>Track: <span data-testid="myTrack"> Front-end </span></p> </div>
+ </div>
+    </div>
  
   <script>
     const d = new Date();
@@ -25,33 +34,7 @@
     const dateElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
      dateElement.innerHTML = day;
      let result ;
-
-let options = {
-            method: 'GET',
-            headers: {
-                'Content-Type': 
-                    'application/json;charset=utf-8',
-                    Accept: "application/json",
-Authorization: `Bearer xoxb-5525350307635-5859334007671-H6hlWljM6RmrDNWzbgALjkJG`
-            },
-            
-        }
-        // Fake api for making post requests
-        let fetchRes = fetch(
-"https://slack.com/api/users.profile.get", 
-                                        options);
-        fetchRes.then(res =>
-            res.json()).then(d => {
-                console.log(d)
- result = d;
-            }).catch(e=>{console.log(e)})
-
-
-
-console.log("result",result)
-    
-    /* xoxb-5525350307635-5859334007671-H6hlWljM6RmrDNWzbgALjkJG */
-  </script>
+</script>
 
   
 </body>
