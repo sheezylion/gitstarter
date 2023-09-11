@@ -14,8 +14,7 @@
 }
 
 .slack-container{
-  width:45vw;
-  height: 45vh;
+  width:70vw;
   background-color: #1B1D21;
   border-radius: 10px;
  
@@ -23,15 +22,13 @@
 }
 
 .header-container{
+  width: 50%;
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-evenly;
+  justify-content: start;
   align-items: center;
- margin-top: 30px;
- margin-right: 50px;
- margin-left: 50px;
-  
-}
+ padding: 80px 50px 50px 80px;
+ }
 
 .header-container img{
   border-radius: 10px;
@@ -43,26 +40,65 @@
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   font-size: 24px;
+  padding-left: 20px;
 }
 
 .info-container{
+  width: 50%;
   color: white;
   font-family: 'Lato', sans-serif;
-  margin-top: 30px;
-  margin-left: 75px;
-  line-height: 25px;
-}
-
-span{
-  color: #06ADFE
+  padding: 0px 50px 90px 80px;
+  
 }
 
 .info-container h2{
   font-weight: 700;
   font-size: 20px;
+  padding-bottom: 20px;
+ 
 }
 
 .info-container p{
   font-weight: 400;
   font-size: 16px;
+  line-height: 30px;
+}
+
+.info-container span{
+  color: #06ADFE
+}
+
+
+/* modile responsiveness */
+@media screen and (max-width:425px) {
+
+  .slack-container {
+    width:90%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+    padding-right: 50px;
+    
+    
+    
+  }
+  .header-container img{
+    
+    width: 120px;
+    border-radius: 10px;
+  
+  }
+  .header-container h1{
+    color:white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    padding-left: 10px;
+  }
+  
+  .info-container p{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+  }
 }
