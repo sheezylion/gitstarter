@@ -1,0 +1,14 @@
+{
+  "name": "slack-assignment",
+  "version": "1.0.0",
+  "description": "slack assignment displaying image and user name",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sheezylion",
+  "license": "ISC",
+  "dependencies": {
+    "@slack/web-api": "^6.9.0"
+  }
+}

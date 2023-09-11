@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>slack assignment</title>
 
 </head>
@@ -30,9 +31,10 @@ let options = {
             headers: {
                 'Content-Type': 
                     'application/json;charset=utf-8',
+                    Accept: "application/json",
 Authorization: `Bearer xoxb-5525350307635-5859334007671-H6hlWljM6RmrDNWzbgALjkJG`
             },
-            data:{token:"xoxb-5525350307635-5859334007671-H6hlWljM6RmrDNWzbgALjkJG"}
+            
         }
         // Fake api for making post requests
         let fetchRes = fetch(
@@ -42,7 +44,8 @@ Authorization: `Bearer xoxb-5525350307635-5859334007671-H6hlWljM6RmrDNWzbgALjkJG
             res.json()).then(d => {
                 console.log(d)
  result = d;
-            })
+            }).catch(e=>{console.log(e)})
+
 
 
 console.log("result",result)
