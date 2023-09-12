@@ -68,6 +68,33 @@
   color: #06ADFE
 }
 
+.gh-source a{
+  color: white;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  padding-left: 5px;
+ 
+  
+  
+  
+}
+
+.gh-source p {
+  margin-bottom: 30px;
+  margin-top: -70px;
+  margin-left: 80px;
+  background-color: #06ADFE;
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 5px;
+}
+
+.gh-source a:hover{
+  color: #1B1D21;
+}
+
+
 
 /* modile responsiveness */
 @media screen and (max-width:425px) {
